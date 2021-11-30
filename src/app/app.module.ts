@@ -18,6 +18,8 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MaterialModule } from './material.module';
+import { UnregisteredusersComponent } from './components/unregisteredusers/unregisteredusers.component';
+import { ProjectmembershipsComponent } from './components/projectmemberships/projectmemberships.component';
 
 
 @NgModule({
@@ -29,6 +31,10 @@ import { MaterialModule } from './material.module';
     HeaderComponent,
   
     ErrorComponent,
+  
+    UnregisteredusersComponent,
+  
+    ProjectmembershipsComponent,
  
 
   ],
