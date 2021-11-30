@@ -8,7 +8,6 @@ import {HttpClientModule} from '@angular/common/http';
 import {UsersComponent} from './containers/users.component';
 import {DashboardComponent} from './components/layout/dashboard.component';
 import {HeaderComponent} from './components/layout/header.component';
-import {MaterialModule} from './material.module';
 import {HttpService} from './services/http.service';
 import {ApiService} from './services/api.service';
 import {StoreModule} from '@ngrx/store';
@@ -18,6 +17,7 @@ import {ErrorComponent} from './components/error.component';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MaterialModule } from './material.module';
 
 
 @NgModule({
@@ -36,7 +36,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
     FlexLayoutModule,
     FlexModule,
     HttpClientModule,
@@ -44,6 +43,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
     ReactiveFormsModule,
     FormsModule,
+    MaterialModule
+    
   ],
   providers: [HttpService, ApiService, UserRepository],
   bootstrap: [AppComponent]

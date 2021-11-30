@@ -1,14 +1,12 @@
 export class StoreUtility {
-  // [{id,...},{id,..}] -> normal array
-  // entities: {id:{}} -> normalized format
+
   static normalize(entityArray: Entity[]) {
     return entityArray.reduce((previousValue, currentValue) => {
       return {...previousValue, ...{[currentValue.id]: currentValue}};
     }, {});
   }
 
-  // {dsdsd:{id:dsdsd,name:"dasds"}}; -> entities
-  // [{id:dsdsd,name:"dasds"}];
+
   static unNormalized(entities: { [id: number]: any }) {
     if (!entities) {
       return [];

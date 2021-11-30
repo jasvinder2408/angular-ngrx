@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
-  selector: 'youtube-error',
+  selector: 'app-error',
   template: `
     <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
       <mat-icon>error_outline</mat-icon>

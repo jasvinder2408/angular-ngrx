@@ -22,13 +22,7 @@ const initialState: UserReducerState = {
 
 export function UserReducer(state = initialState, action: Action): UserReducerState {
   switch (action.type) {
-    // case USER_LIST_REQUEST: {
-    //   return {...state, loading: true};
-    // }
     
-    // case USER_LIST_ERROR: {
-    //   return {...state, error: true, loading: false};
-    // }
     case USER_LIST_SUCCESS: {
       const users = action.payload.data;
       const obj = StoreUtility.normalize(users);

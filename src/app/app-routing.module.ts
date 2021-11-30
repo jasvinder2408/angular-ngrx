@@ -3,13 +3,12 @@ import {RouterModule, Routes} from '@angular/router';
 import {DashboardComponent} from './components/layout/dashboard.component';
 import {UsersComponent} from './containers/users.component';
 
-const routes: Routes = [{
+const routes: Routes = [
+  {
   path: '', component: DashboardComponent,
-  children: [
-    {path: '', component: UsersComponent},
-   
-  ]
-}];
+
+},
+{path: 'user', component: UsersComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
